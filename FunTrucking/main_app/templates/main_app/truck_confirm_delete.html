@@ -1,17 +1,28 @@
 {% extends 'base.html' %}  
 {% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/trucks/delete-truck.css' %}" />
+{% endblock %} 
 {% block content %}
 
 <div class="page-header">
     <h1>Delete Truck?</h1>
-    <img src="{% static 'static/images/truck8.jpg' %}" alt="A truck" />
 </div>
 
-<h2>Are you sure you want to delete {{ truck.name }}?</h2>
+<div class="container">
+  <div class="image-container">
+    <img src="{% static 'images/truck4.jpg' %}" alt="A truck" />
+  </div>
 
-<form action="" method="post" class="form">
-    {% csrf_token %}
-    <a href="{% url 'truck-detail' truck.id %}" class="btn secondary">Cancel</a>
-    <button type="submit" class="btn danger">Yes - Delete!</button>
-</form>
+  <div class="form-container">
+    <h2>Are you sure you want to delete {{ truck.name }}?</h2>
+
+    <form action="" method="post" class="form">
+        {% csrf_token %}
+        <a href="{% url 'truck-detail' truck.id %}" class="btn secondary">Cancel</a>
+        <button type="submit" class="btn danger">Yes - Delete!</button>
+    </form>
+  </div>
+</div>
+
 {% endblock %}

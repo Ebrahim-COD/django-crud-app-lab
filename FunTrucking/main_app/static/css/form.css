@@ -1,39 +1,130 @@
+/* form.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page header styles */
+.page-header {
+  text-align: center; /* Center the header content */
+  background-color: #f8f9fa; /* Light background color for the header */
+
+}
+
+.page-header h1 {
+  font-size: 2.5rem; /* Larger font size for the title */
+  color: #333; /* Darker text color for better contrast */
+}
+
+/* Error message styles */
+.red-text {
+  color: #e63946; /* Red color for error messages */
+  text-align: center; /* Center the error message */
+  margin: 1rem 0; /* Margin around the error message */
+}
+
+/* Content container styles */
+.content-container {
+  display: flex;
+  align-items: stretch; /* Ensure both elements stretch to the same height */
+  justify-content: space-between; /* Space between image and form */
+  padding: 2rem; /* Padding around the content */
+  gap: 2rem; /* Space between the image and the form */
+  background-color: #fff; /* White background for the content section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+  border-radius: 8px; /* Rounded corners for the container */
+}
+
+/* Image container styles */
+.image-container {
+  flex: 1; /* Allow the image container to grow */
+}
+
+.image-container img {
+  width: 100%; /* Ensure image fits container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Limit the height of the image */
+  object-fit: cover; /* Cover the area of the container */
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Form container styles */
 .form-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  table {
-    padding: 0 40px;
-    width: 100%;
-    border-spacing: 0 20px;
-  }
-  
-  th {
-    text-align: left;
-    padding: 6px 20px 0 0;
-    font-weight: normal;
-    vertical-align: top;
-    font-size: var(--font-reg);
-  }
-  
-  td {
-    max-width: 60%;
-  }
-  
-  td > * {
-    width: 100%;
-    padding: 2px 4px;
-    font-size: var(--font-l);
-  }
-  
-  td > textarea {
-    height: calc(4 * var(--font-l) + 8px);
-    font-family: inherit;
-  }
-  
-  .btn {
-    align-self: flex-end;
-    margin-right: 40px;
-  }
+  flex: 1; /* Allow the form container to grow */
+  max-width: 500px; /* Limit the width of the form */
+  display: flex;
+  flex-direction: column; /* Align form elements vertically */
+  justify-content: center; /* Center the form vertically */
+  padding: 2rem; /* Padding around the form */
+  background-color: #fff; /* White background for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+  border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+.form-container form {
+  width: 100%; /* Full width form */
+}
+
+/* Input, Select, and Textarea Styles */
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"],
+.form-container input[type="number"],
+.form-container select,
+.form-container textarea {
+  width: 100%; /* Full width for form inputs */
+  padding: 0.75rem; /* Padding inside form inputs */
+  border-radius: 4px; /* Rounded corners for inputs */
+  border: 1px solid #ccc; /* Light border for inputs */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-bottom: 1rem; /* Space below inputs */
+  font-size: 1rem; /* Base font size */
+}
+
+/* Form Labels */
+.form-container label {
+  display: block; /* Labels on their own line */
+  margin-bottom: 0.5rem; /* Space below labels */
+  font-weight: bold; /* Bold labels */
+  font-size: 1rem; /* Base font size for labels */
+  color: #333; /* Dark text color for labels */
+}
+
+/* Form Help Text */
+.form-container .helptext {
+  font-size: 0.875rem; /* Smaller font size for help text */
+  color: #666; /* Lighter color for help text */
+  margin-top: -0.75rem; /* Adjust position to align with inputs */
+  margin-bottom: 1rem; /* Space below help text */
+}
+
+/* Form Error Messages */
+.form-container .errorlist {
+  margin-top: -0.5rem; /* Position error messages closer to inputs */
+  margin-bottom: 1rem; /* Space below error messages */
+  color: #e63946; /* Red color for error messages */
+  font-size: 0.875rem; /* Smaller font size for error messages */
+}
+
+/* Submit Button Styles */
+form button {
+  background-color: #e63946; /* Red background for the button */
+  color: #fff; /* White text color */
+  border: none; /* Remove border for the button */
+  padding: 0.75rem; /* Padding inside the button */
+  border-radius: 4px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+  width: 100%; /* Full width for the button */
+  margin-top: 1rem; /* Space above the button */
+}
+
+form button:hover {
+  background-color: #d62839; /* Darker red on hover */
+}

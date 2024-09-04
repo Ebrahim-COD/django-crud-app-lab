@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .truck-container {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: flex-start; /* Align items to the start vertically */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .truck-details, .truck-fuel-container {
+    width: 48%; /* Take up half the space each */
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .truck-details {
+    text-align: center; /* Center align text in truck details */
+  }
+  
+  .truck-details h1 {
+    font-size: 2.5rem;
+    color: #e63946;
+    margin-bottom: 1rem;
+  }
+  
+  .truck-details h2 {
+    font-size: 1.75rem;
+    color: #457b9d;
+    margin-bottom: 1rem;
+  }
+  
+  .truck-details p {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .truck-actions {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .truck-actions .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #457b9d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .truck-actions .btn.warn {
+    background-color: #e9c46a;
+  }
+  
+  .truck-actions .btn.danger {
+    background-color: #e63946;
+  }
+  
+  .truck-actions .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .truck-fuel-container {
+    background-color: #f1faee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fuels {
+    text-align: center; /* Center align text for the fuels section */
+  }
+  
+  .fuels h3 {
+    font-size: 1.5rem;
+    color: #457b9d;
+    margin-bottom: 1rem;
+  }
+  
+  .subsection-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .subsection-content form {
+    width: 100%;
+  }
+  
+  .subsection-content form .btn {
+    background-color: #2a9d8f;
+    margin-top: 0.75rem;
+  }
+  
+  .table-container {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column; /* Arrange table and heading vertically */
+    align-items: center; /* Center align items horizontally */
+    width: 100%; /* Full width of the container */
+  }
+  
+  .table-container h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .table-container table {
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the table */
+    border-collapse: collapse;
+    text-align: left; /* Ensure table text is left aligned */
+  }
+  
+  .table-container th,
+  .table-container td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .table-container th {
+    background-color: #457b9d;
+    color: #fff;
+  }
+  
+  .table-container td {
+    background-color: #f4f4f4;
+  }
+  
+  .table-container tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  @media (max-width: 768px) {
+    .truck-container {
+      flex-direction: column;
+      height: auto; /* Adjust height to content */
+    }
+  
+    .truck-details, .truck-fuel-container {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  

@@ -1,4 +1,127 @@
-.images-t{
-    width: 50%;
-    height: 50%;
+/* base.css */
+
+/* General styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Light grey background for the page */
+}
+
+/* Navigation styles */
+nav {
+  background-color: #333; /* Dark background for nav */
+  color: #fff;
+  padding: 1rem 0; /* Padding for the navigation */
+  text-align: center;
+  position: sticky; /* Stick to the top when scrolling */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center navigation items */
+}
+
+nav li {
+  margin: 0 1.5rem; /* Spacing between nav items */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem; /* Slightly larger text for readability */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #f4a261; /* Change color on hover */
+}
+
+/* Header styles */
+header {
+  background-color: #fff; /* White background for header */
+  padding: 0; /* No padding for header, image will have its own padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for header */
+}
+
+/* Image container */
+.header-image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  padding: 1rem;
+}
+
+.header-image-container img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 400px; /* Limit height to keep it manageable */
+  border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+/* Button styles */
+form button {
+  background-color: #e63946; /* Red background */
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+form button:hover {
+  background-color: #d62839; /* Darker red on hover */
+}
+
+/* Main content styles */
+main {
+  padding: 2rem;
+}
+
+/* base.css */
+
+/* Content styles */
+.page-content {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333; /* Darker text color for readability */
+  max-width: 800px; /* Limit width to improve readability */
+  margin: 2rem auto; /* Center the content and add vertical spacing */
+  padding: 0 1rem; /* Add horizontal padding for mobile view */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin: 2rem 0 1rem; /* Spacing above and below the heading */
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid #ccc; /* Light gray line for separation */
+  margin: 1rem auto; /* Center the line and add vertical spacing */
+}
+
+p {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.title-container {
+  text-align: center; /* Center the title */
+  padding: 1rem; /* Padding around the title */
+  background-color: #fff; /* White background for the title section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+}
+
+.title-container h1 {
+  font-size: 3rem; /* Large font size for the title */
+  color: #333; /* Darker text color for better contrast */
 }

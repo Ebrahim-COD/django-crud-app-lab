@@ -48,7 +48,7 @@ def truck_detail(request, truck_id):
 
 class TruckCreate(LoginRequiredMixin,CreateView):
     model = Truck
-    fields = ['make', 'description', 'year']
+    fields = ['name','make', 'description', 'year']
     
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -57,7 +57,7 @@ class TruckCreate(LoginRequiredMixin,CreateView):
 
 class TruckUpdate(UpdateView):
     model = Truck
-    fields = ['make', 'description', 'year']
+    fields = ['name','make', 'description', 'year']
 
 class TruckDelete(DeleteView):
     model = Truck

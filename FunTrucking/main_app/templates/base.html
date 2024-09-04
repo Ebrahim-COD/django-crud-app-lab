@@ -1,48 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="" />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="{% static 'images/splash.svg' %}"
-    />
-    <title>Fun Trucking</title>
-    {% block head %} {% endblock %}
-  </head>
-  <body>
-    <header>
-      <div class="header-logo-container">
-        <a href="/">
-          <img class="images-t" src="{% static 'images/truck1.jpg' %}" alt="FUN TRUCKING" />
-        </a>
-      </div>
-      <nav>
-        <ul>
-          {% if user.is_authenticated %}
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'truck-index' %}">Explore Trucks</a></li>
-          <li><a href="{% url 'truck-create' %}">Add a Truck</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li>
-            <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
-              {% csrf_token %}
-              <button type="submit">Log out</button>
-            </form>
-          </li>
-          {% else %}
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'home' %}">Login</a></li>
-          <li><a href="{% url 'signup' %}">Sign Up</a></li>
-          {% endif %}
-        </ul>
-      </nav>
-    </header>
-    <main>{% block content %} {% endblock %}</main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="" />
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/splash.svg' %}" />
+  <title>Fun Trucking</title>
+  {% block head %} {% endblock %}
+</head>
+<body>
+  <nav>
+    <ul>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'truck-index' %}">Explore Trucks</a></li>
+      <li><a href="{% url 'truck-create' %}">Add a Truck</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li>
+        <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+          {% csrf_token %}
+          <button type="submit">Log out</button>
+        </form>
+      </li>
+      {% else %}
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'home' %}">Login</a></li>
+      <li><a href="{% url 'signup' %}">Sign Up</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+  <header>
+    <section class="title-container">
+      <h1>Fun Trucking</h1>
+    </section>
+  </header>
+  <main>{% block content %} {% endblock %}</main>
+</body>
 </html>

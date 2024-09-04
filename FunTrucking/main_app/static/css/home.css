@@ -1,6 +1,70 @@
-/* .image-home {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    object-position: center;
-} */
+
+  /* Content container styles */
+  .content-container {
+    display: flex;
+    align-items: stretch; /* Make sure items stretch to the same height */
+    justify-content: center; /* Center content horizontally */
+    gap: 2rem; /* Space between the image and the form */
+    padding: 2rem; /* Padding around the content */
+    background-color: #fff; /* White background for the content section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+  }
+  
+  /* Image container styles */
+  .image-container {
+    flex: 1; /* Allow image container to grow */
+  }
+  
+  .image-container img {
+    width: 100%; /* Ensure image fits container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 500px; /* Limit the height of the image */
+    object-fit: cover; /* Cover the area of the container */
+    border-radius: 8px; /* Rounded corners for the image */
+  }
+  
+  /* Form container styles */
+  .form-container {
+    flex: 1; /* Allow form container to grow */
+    max-width: 400px; /* Limit form width for better readability */
+    display: flex;
+    align-items: center; /* Center the form vertically within the container */
+    justify-content: center; /* Center the form horizontally within the container */
+  }
+  
+  .login {
+    padding: 2rem; /* Padding around the form */
+    background-color: #fff; /* White background for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    width: 100%; /* Full width of the container */
+  }
+  
+  .login h1 {
+    font-size: 2rem; /* Heading size for the form */
+    color: #333; /* Darker text color for better contrast */
+    margin-bottom: 1rem; /* Spacing below the heading */
+  }
+  
+  .login input,
+  .login button {
+    width: 100%; /* Full width for inputs and button */
+    padding: 0.75rem; /* Padding inside the inputs and button */
+    margin-bottom: 1rem; /* Spacing between form elements */
+    border-radius: 4px; /* Rounded corners for inputs and button */
+    border: 1px solid #ccc; /* Light border for inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  .login button {
+    background-color: #e63946; /* Red background for the button */
+    color: #fff; /* White text color */
+    border: none; /* Remove border for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .login button:hover {
+    background-color: #d62839; /* Darker red on hover */
+  }
+  

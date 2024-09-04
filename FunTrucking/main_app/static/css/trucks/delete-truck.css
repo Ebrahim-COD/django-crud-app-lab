@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+    color: #e63946;
+    margin-bottom: 1rem;
+  }
+  
+  .page-header img {
+    max-width: 100%; /* Adjusts the image width to fit its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Space between image and form */
+    margin: 2rem auto; /* Center the container and add vertical margins */
+    max-width: 1200px; /* Optional: restrict container width */
+  }
+  
+  .image-container, .form-container {
+    flex: 1;
+    max-width: 45%; /* Restricts maximum width to keep them the same size */
+    box-sizing: border-box; /* Ensures padding and border are included in total width */
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    max-width: 100%; /* Makes sure the image scales properly */
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; /* Adds padding inside the form container */
+    background-color: #fff; /* Optional: Adds a background color */
+    border-radius: 8px; /* Optional: Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .form .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form .btn.secondary {
+    background-color: #aaa;
+  }
+  
+  .form .btn.danger {
+    background-color: #e63946;
+  }
+  
+  .form .btn.secondary:hover,
+  .form .btn.danger:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .page-header img {
+      max-width: 80%; /* Adjust for smaller screens */
+    }
+  }
+  
