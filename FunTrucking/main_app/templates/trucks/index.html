@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/trucks/truck-index.css' %}"/>
+{% endblock %} 
+{% block content %}
+
+<section class="page-header">
+    <h1>Truck List</h1>
+    {% comment %} <img src="{% static 'images/cool-truck.svg' %}" alt="A cool truck" />
+    <img src="{% static 'images/happy-truck.svg' %}" alt="A happy truck" />
+    <img src="{% static 'images/truck-in-action.svg' %}" alt="A truck in action" />
+    <img src="{% static 'images/truck-in-garage.svg' %}" alt="A truck in a garage" /> {% endcomment %}
+</section>
+
+<section class="card-container">
+    {% for truck in trucks %}
+        <div class="card">
+            <a href="{% url 'truck-detail' truck.id%}">
+                <div class="card-content">
+                    <h2 class="card-title">{{ truck.name }}</h2>
+                    {% if truck.year > 0 %}
+                    <p>A {{ truck.year }} model {{ truck.make }} {{ truck.model }}</p>
+                    {% else %}
+                    <p>A {{ truck.make }} {{ truck.model }} truck.</p>
+                    {% endif %}
+                    <p><small>{{ truck.description }}</small></p>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+</section>
+
+
+{% endblock %}
